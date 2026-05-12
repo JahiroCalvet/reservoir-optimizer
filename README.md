@@ -14,6 +14,24 @@ Sensitivity Analysis (SALib · Sobol method)
 SQLite / PostgreSQL (run history)
 ```
 
+---
+
+## Screenshots
+
+### Dashboard Summary
+![Dashboard](docs/screenshots/4_dashboard.png)
+
+### Oil Recovery vs Reservoir Parameters
+![Parameter Sweep](docs/screenshots/1_parameter_sweep.png)
+
+### Bayesian Optimization — Convergence & Optimal Parameters
+![Bayesian Optimization](docs/screenshots/2_bayesian_optimization.png)
+
+### Sobol Global Sensitivity Analysis
+![Sensitivity Analysis](docs/screenshots/3_sensitivity_analysis.png)
+
+---
+
 ## What it does
 
 Given physical parameters of an oil reservoir (porosity, permeability, water saturation, net pay thickness, pressure), the system:
@@ -70,6 +88,15 @@ Open http://localhost:8000/docs
 ```bash
 docker build -t reservoir-optimizer .
 docker run -p 8000:8000 reservoir-optimizer
+```
+
+---
+
+## Generate Screenshots
+
+```bash
+pip install matplotlib
+python generate_plots.py
 ```
 
 ---
@@ -157,6 +184,8 @@ pytest tests/ -v
 - ✅ pytest · unit + integration tests
 - ✅ Docker · GitHub Actions CI/CD
 - ✅ Oil & Gas domain knowledge
+
+---
 
 ## License
 MIT
